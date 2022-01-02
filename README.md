@@ -8,7 +8,7 @@
 
 - [x] Gather enough Data samples
 - [x] Clean Data (if needed)
-- [ ] Convert Data format
+- [x] Convert Data format
 - [ ] Read Data
 - [ ] Filter Matches with the selected Champion is present
 - [ ] Filter relatable compositions
