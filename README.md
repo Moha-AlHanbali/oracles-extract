@@ -9,11 +9,11 @@
 - [x] Gather enough Data samples
 - [x] Clean Data (if needed)
 - [x] Convert Data format
-- [ ] Read Data
-- [ ] Filter Matches with the selected Champion is present
+- [x] Read Data
+- [x] Filter Matches with the selected Champion is present
 - [ ] Filter relatable compositions
 - [ ] Return Most commonly bought items in similar cases
-- [ ] Filter Winning Cases
+- [x] Filter Winning Cases
 - [ ] Return the 'most winning' item builds
 - [ ] Add tolerance threshold
 - [ ] Create a program to input 'request' Data
