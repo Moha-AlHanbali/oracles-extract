@@ -2,7 +2,7 @@
 
 ## Purpose
 
-- Uses League of Legends filtered Match data to elects the statistically superior build path for a champion, based on the player's team and enemy team compositions,and most commonly bought items in similar situations.
+- Oracle's Extract uses League of Legends filtered Match data to elect the statistically superior build path for a champion, based on the player's team and enemy team compositions,and most commonly bought items in similar situations.
 
 ## To Do
 
