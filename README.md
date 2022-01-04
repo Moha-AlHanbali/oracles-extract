@@ -11,9 +11,10 @@
 - [x] Convert Data format
 - [x] Read Data
 - [x] Filter Matches with the selected Champion is present
+- [x] Filter Winning Cases
+- [x] Most commonly bought in winning cases
 - [ ] Filter relatable compositions
 - [ ] Return Most commonly bought items in similar cases
-- [x] Filter Winning Cases
 - [ ] Return the 'most winning' item builds
 - [ ] Add tolerance threshold
 - [ ] Create a program to input 'request' Data
