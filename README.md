@@ -13,9 +13,9 @@
 - [x] Filter Matches with the selected Champion is present
 - [x] Filter Winning Cases
 - [x] Most commonly bought in winning cases
-- [ ] Filter relatable compositions
+- [x] Filter relevant compositions
 - [ ] Return Most commonly bought items in similar cases
 - [ ] Return the 'most winning' item builds
-- [ ] Add tolerance threshold
+- [x] Add tolerance threshold
 - [ ] Create a program to input 'request' Data
 - [ ] Replace sample Data with new, sufficient Dataset
