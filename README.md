@@ -16,6 +16,6 @@
 - [ ] Filter relatable compositions
 - [ ] Return Most commonly bought items in similar cases
 - [ ] Return the 'most winning' item builds
-- [ ] Add tolerance threshold
+- [x] Add tolerance threshold
 - [ ] Create a program to input 'request' Data
 - [ ] Replace sample Data with new, sufficient Dataset
