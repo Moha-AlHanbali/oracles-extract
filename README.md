@@ -13,7 +13,7 @@
 - [x] Filter Matches with the selected Champion is present
 - [x] Filter Winning Cases
 - [x] Most commonly bought in winning cases
-- [ ] Filter relatable compositions
+- [x] Filter relevant compositions
 - [ ] Return Most commonly bought items in similar cases
 - [ ] Return the 'most winning' item builds
 - [x] Add tolerance threshold
