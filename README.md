@@ -19,4 +19,4 @@
 - [x] Add tolerance threshold
 - [ ] Create a program to input 'request' Data
 - [ ] Replace sample Data with new, sufficient Dataset
-- [ ] Convert Item Keys to Item Names
+- [x] Convert Item Keys to Item Names

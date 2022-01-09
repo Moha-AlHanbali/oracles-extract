@@ -4,6 +4,9 @@ import pandas as pd
 import json
 import difflib
 
+from item_keys import item_keys
+
+
 def process_inputs(ally_team : list, enemy_team: list, champion : str, ally_tolerance = 0.2, enemy_tolerance = 0.2):
     """
     process_inputs function recieves data from input_handler and runs analysis on match data to return results.
@@ -34,10 +37,10 @@ def process_inputs(ally_team : list, enemy_team: list, champion : str, ally_tole
 
         relevant_most_common_build, relevant_most_common_bought = filter_composition(ally_team, ally_comp, ally_tolerance, enemy_team, enemy_comp, enemy_tolerance, champion, most_common_list, most_common_df)
 
-    
-        return f'''Most common bought items in winning matches: {most_common_bought}
-        Most common bought item builds in similar situations:{relevant_most_common_build}
-        Most common bought items in winning matches {relevant_most_common_bought}'''
+        most_common_bought, relevant_most_common_build, relevant_most_common_bought = convert_keys(most_common_bought, relevant_most_common_build, relevant_most_common_bought)
+        return f'''\nMost common bought items in winning matches: {most_common_bought}
+        \nMost common bought item builds in similar situations:{relevant_most_common_build}
+        \nMost common bought items in winning matches {relevant_most_common_bought}'''
 
     except:
         return 'Not sufficient data, try other team compositions...'
@@ -170,5 +173,20 @@ def filter_composition(ally_team, ally_comp, ally_tolerance, enemy_team, enemy_c
     return relevant_most_common_build, relevant_most_common_bought
 
 
+def convert_keys(most_common_bought, relevant_most_common_build, relevant_most_common_bought):
+    for key, item in most_common_bought.items():
+        most_common_bought[key] = item_keys[str(item)]
+
+    relevant_most_common_build = eval(relevant_most_common_build)
+    for item in range(len(relevant_most_common_build)):
+        if relevant_most_common_build[item] > 0:
+            relevant_most_common_build[item] = (item_keys[str(relevant_most_common_build[item])])
+        else:
+            relevant_most_common_build[item] =  'None'
+
+    for key, item in relevant_most_common_bought.items():
+        relevant_most_common_bought[key] = item_keys[str(item)]
+
+    return most_common_bought, relevant_most_common_build, relevant_most_common_bought
 
 print(process_inputs(['Nami','Lucian', 'Syndra', 'Nidalee', 'Irelia'],['Leona', 'Jhin', 'Orianna', 'JarvanIV', 'Camille'], 'Irelia'))
