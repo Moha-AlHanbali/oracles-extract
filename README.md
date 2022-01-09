@@ -14,8 +14,9 @@
 - [x] Filter Winning Cases
 - [x] Most commonly bought in winning cases
 - [x] Filter relevant compositions
-- [ ] Return Most commonly bought items in similar cases
-- [ ] Return the 'most winning' item builds
+- [x] Return Most commonly bought items in similar cases
+- [x] Return the 'most winning' item builds
 - [x] Add tolerance threshold
 - [ ] Create a program to input 'request' Data
 - [ ] Replace sample Data with new, sufficient Dataset
+- [x] Convert Item Keys to Item Names
