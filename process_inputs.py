@@ -48,15 +48,15 @@ def process_inputs(ally_team : list, enemy_team: list, champion : str, ally_tole
 
 def read_data():
     try:
-        df = pd.read_csv('match_data.csv')
+        df = pd.read_csv('preseason12_match_data.csv')
 
     except:
 
-        with open('match_data.json') as json_file:
+        with open('preseason12_match_data.json') as json_file:
             data = json.load(json_file)
 
-        pd.json_normalize(data).to_csv('match_data.csv')
-        df = pd.read_csv('match_data.csv')
+        pd.json_normalize(data).to_csv('preseason12_match_data.csv')
+        df = pd.read_csv('preseason12_match_data.csv')
 
     return df
 
