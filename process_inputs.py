@@ -3,6 +3,8 @@
 import pandas as pd
 import json
 import difflib
+import warnings
+
 
 from item_keys import item_keys
 
@@ -22,6 +24,9 @@ def process_inputs(ally_team : list, enemy_team: list, champion : str, ally_tole
             String: Analyzed item builds
     """
     try:
+
+        warnings.simplefilter(action='ignore', category=FutureWarning)
+        
         df = read_data()
 
         team1_columns = df.columns[1:12]
@@ -48,15 +53,15 @@ def process_inputs(ally_team : list, enemy_team: list, champion : str, ally_tole
 
 def read_data():
     try:
-        df = pd.read_csv('match_data.csv')
+        df = pd.read_csv('preseason12_match_data.csv')
 
     except:
 
-        with open('match_data.json') as json_file:
+        with open('preseason12_match_data.json') as json_file:
             data = json.load(json_file)
 
-        pd.json_normalize(data).to_csv('match_data.csv')
-        df = pd.read_csv('match_data.csv')
+        pd.json_normalize(data).to_csv('preseason12_match_data.csv')
+        df = pd.read_csv('preseason12_match_data.csv')
 
     return df
 
@@ -188,5 +193,3 @@ def convert_keys(most_common_bought, relevant_most_common_build, relevant_most_c
         relevant_most_common_bought[key] = item_keys[str(item)]
 
     return most_common_bought, relevant_most_common_build, relevant_most_common_bought
-
-print(process_inputs(['Nami','Lucian', 'Syndra', 'Nidalee', 'Irelia'],['Leona', 'Jhin', 'Orianna', 'JarvanIV', 'Camille'], 'Irelia'))
